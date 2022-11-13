@@ -11,11 +11,12 @@
 // #define macroName lineOfCodeThatWillBeReplacedWhenCompilerRun
 
 #include <iostream>
-#define ARRAYSIZE(array) (sizeof(array) / sizeof(array[0]))
+#define ARRAYSIZE(array) (sizeof(array) / sizeof(array[0])) //this macro include parameter
+#define print std::cout //macro without parameter
 
 int main(int argc, char const *argv[])
 {
     int arrayVar[] = {23, 24, 43, 12, 43, 23};
-    std::cout << "Array Size: " << ARRAYSIZE(arrayVar);
+    print << "Array Size: " << ARRAYSIZE(arrayVar);
     return 0;
 }
